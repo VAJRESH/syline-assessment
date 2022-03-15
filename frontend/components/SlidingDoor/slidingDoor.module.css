@@ -1,0 +1,112 @@
+.slidingDoor {
+  display: flex;
+  gap: 3px;
+  position: relative;
+
+  min-height: calc(100% - var(--nav-height));
+  overflow: hidden;
+
+  background-color: var(--background);
+}
+.cross {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+
+  border: 1px solid #fff;
+  border-radius: 100%;
+
+  height: 40px;
+  width: 40px;
+}
+
+.left,
+.right {
+  border: 5px solid var(--primary-color);
+  padding: 100px 50px;
+
+  width: 100%;
+  min-height: 100%;
+  transition: all 0.75s ease;
+}
+
+/* left */
+/* title */
+.titleContainer {
+  margin-left: 10px;
+}
+.title {
+  font-size: 40px;
+}
+.list {
+  display: flex;
+  gap: 50px;
+  margin: 10px 20px;
+}
+
+/* lab task */
+.labTask {
+  display: flex;
+  margin: 20px 0;
+}
+.labTask img {
+  height: 80px;
+  width: 80px;
+  margin-right: 20px;
+}
+.taskTitle {
+  text-transform: uppercase;
+  color: #d6d8d7;
+}
+.taskCount {
+  font-size: 42px;
+}
+
+/* right */
+.right {
+  display: flex;
+  text-align: center;
+}
+.right > section {
+  margin: auto;
+}
+
+/* time left bar */
+.barBackground {
+  height: 200px;
+  width: 70px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+  position: relative;
+  border: 2px solid var(--primary-color);
+  margin: 10px auto;
+  z-index: 2;
+}
+
+.divider {
+  height: 10px;
+  width: 70px;
+
+  background-color: var(--background);
+  border-top: 2px solid var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+  margin: -2px;
+  z-index: 4;
+}
+
+.innerFill {
+  position: absolute;
+  bottom: -1px;
+
+  width: 70px;
+  background-color: var(--primary-color);
+  z-index: 3;
+}
+
+.hoursLeftText {
+  font-size: 20px;
+}

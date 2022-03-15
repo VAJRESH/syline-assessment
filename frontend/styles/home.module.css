@@ -1,0 +1,17 @@
+.homePage {
+  height: 100vh;
+  color: var(--text-light);
+}
+
+.labtimeExpiry {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  border: 2px solid red;
+  color: red;
+  background-color: var(--background);
+  text-align: center;
+  padding: 10px 20px;
+}

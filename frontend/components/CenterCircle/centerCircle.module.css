@@ -1,0 +1,118 @@
+.loginCircle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+
+  height: 350px;
+  width: 350px;
+
+  border: 2px solid var(--primary-color);
+  border-radius: 100%;
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  background-color: var(--background);
+  box-shadow: 0px 0px 1px 5px #c0eeee, 0px 0px 10px 10px var(--primary-color);
+}
+
+.loginCircle img {
+  height: 70px;
+  width: 70px;
+  border: 1px solid;
+}
+
+.formControl {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.formControl label {
+  color: rgb(207, 207, 207);
+  text-transform: uppercase;
+}
+.formControl input {
+  height: 40px;
+  width: 250px;
+
+  margin: 10px;
+  margin-bottom: 20px;
+  background-color: transparent;
+  font-size: 40px;
+  padding: 2px 10px;
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+  outline: transparent;
+  letter-spacing: 2px;
+}
+.loginCircle button {
+  padding: 15px;
+  font-weight: bolder;
+  font-size: 20px;
+  background-color: var(--primary-color);
+  border: 0;
+  opacity: 0.8;
+}
+
+.loginCircle button:hover {
+  opacity: 1;
+}
+
+.backgroundSpinner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  border: 2px solid var(--primary-color);
+  border-radius: 100%;
+  padding: 20px;
+  animation: spin 1s;
+  z-index: 2;
+}
+
+.successGlow {
+  box-shadow: 5px 5px 5px 10px #c0eeee, 3px 5px 10px 15px var(--primary-color);
+}
+.fadeAway {
+  opacity: 0;
+  animation: fade 2s;
+}
+
+.errorGlow {
+  box-shadow: 5px 5px 5px 10px rgb(255, 132, 132), 3px 5px 10px 15px red;
+}
+.error {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  border: 2px solid red;
+  color: red;
+  background-color: var(--background);
+  text-align: center;
+  padding: 10px 20px;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
